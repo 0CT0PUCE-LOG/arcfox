@@ -15,4 +15,16 @@ function handleShortcut(command) {
     }
 }
 
+function toggleSidebar() {
+    //browser.sidebarAction.toggle();
+    var siderbar = document.getElementById("sidebar");
+    if (siderbar.style.display === "none") {
+        siderbar.style.display = "block";
+    } else {
+        siderbar.style.display = "none";
+    }
+}
+
+document.getElementById("toggle").addEventListener("click", toggleSidebar)
+
 browser.commands.onCommand.addListener(handleShortcut);

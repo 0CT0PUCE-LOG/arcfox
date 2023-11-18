@@ -47,6 +47,8 @@ function handleBrowserControl(id) {
       }
     } else if (id == 'hide') {
       browser.windows.update(window.id, {state: "minimized"});
+    } else if (id == 'toggle') {
+      toggleSidebar();
     }
   });
   initTabSidebarControl();
@@ -74,6 +76,10 @@ document.getElementById("size").addEventListener("click", function() {
 
 document.getElementById("hide").addEventListener("click", function() {
   handleBrowserControl("hide");
+});
+
+document.getElementById("toggle").addEventListener("click", function() {
+  handleBrowserControl("toggle");
 });
 
 document.addEventListener("click", (event) => {

@@ -165,9 +165,18 @@ body {
 }
 
 #sidebar-content ul li button {
+  opacity: 0;
   background: transparent;
-  color: #fff;
+  color: #aac2d3;
   margin-left: auto;
+}
+
+#sidebar-content ul li button:hover {
+  color: white;
+}
+
+#sidebar-content ul li:hover button {
+  opacity: 1;
 }
 
 #new-tab-button {
@@ -262,4 +271,20 @@ body {
   background-color: #5e5f71;
   color: white;
   cursor: pointer;
+}
+
+#sidebar-header #close i:hover {
+  color: #ff4d4d;
+}
+
+#sidebar-header #size i:hover {
+  color: #ffcc00;
+}
+
+#sidebar-header #hide i:hover {
+  color: #00cc66;
+}
+
+#refresh{
+  transform: rotate(-45deg);
 }
